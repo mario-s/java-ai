@@ -4,6 +4,7 @@ package org.openweather;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
@@ -28,7 +29,8 @@ public class WeatherService {
      * @throws RestClientException if the request fails
      */
     @Tool(description = "Get current weather for a specific latitude/longitude")
-    public String getCurrentWeather(double latitude, double longitude) {
+    public String getCurrentWeather(@ToolParam(description = "latitude in deximaL degree") double latitude,
+                                    @ToolParam(description = "longitude in deximaL degree") double longitude) {
         String weatherText = "";
 
         try {
