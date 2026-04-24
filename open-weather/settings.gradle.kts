@@ -1,2 +1,2 @@
-rootProject.name = "mcp-api"
+rootProject.name = "open-weather"
 

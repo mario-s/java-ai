@@ -1,13 +1,10 @@
 package org.openweather;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
-
-import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.mockito.Mockito.when;
@@ -23,7 +20,6 @@ class WeatherServiceTest {
     @MockitoBean
     private ApiClient apiClient;
 
-
     @Test
     @DisplayName("It should return the current weather for a given location.")
     void getCurrentWeather() {
@@ -33,5 +29,4 @@ class WeatherServiceTest {
 
         assertFalse(result.isEmpty(), "Expected a current weather report");
     }
-
 }

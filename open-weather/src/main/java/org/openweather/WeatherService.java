@@ -35,6 +35,7 @@ public class WeatherService {
 
         try {
             Response res = apiClient.getCurrentWeather(latitude, longitude);
+            LOG.debug("weather response: {}", res);
             weatherText =
                     String.format("%s, %s: Temperature: %s °C Wind: %s %s Forecast: %s",
                             res.getCountry(),
