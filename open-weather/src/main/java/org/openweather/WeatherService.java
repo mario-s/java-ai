@@ -29,8 +29,8 @@ public class WeatherService {
      * @throws RestClientException if the request fails
      */
     @Tool(description = "Get current weather for a specific latitude/longitude")
-    public String getCurrentWeather(@ToolParam(description = "latitude in deximaL degree") double latitude,
-                                    @ToolParam(description = "longitude in deximaL degree") double longitude) {
+    public String getCurrentWeather(@ToolParam(description = "latitude in decimal degree") double latitude,
+                                    @ToolParam(description = "longitude in decimal degree") double longitude) {
         String weatherText = "";
 
         try {
