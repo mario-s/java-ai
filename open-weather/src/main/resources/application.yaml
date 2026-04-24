@@ -1,0 +1,4 @@
+app:
+  config:
+    name: openweather
+    apiKey:
