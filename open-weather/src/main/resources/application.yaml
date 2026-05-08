@@ -1,4 +1,10 @@
 app:
   config:
     name: openweather
-    apiKey:
+    apiKey: 
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console:
