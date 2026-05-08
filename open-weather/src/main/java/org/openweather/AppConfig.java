@@ -9,8 +9,6 @@ public class AppConfig {
 
     private String baseUrl;
 
-    private String name;
-
     private String apiKey;
 
     public void setBaseUrl(String baseUrl) {
@@ -19,14 +17,6 @@ public class AppConfig {
 
     public String getBaseUrl() {
         return baseUrl;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setApiKey(String apiKey) {
