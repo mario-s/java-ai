@@ -7,9 +7,19 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "app.config")
 public class AppConfig {
 
+    private String baseUrl;
+
     private String name;
 
     private String apiKey;
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
 
     public void setName(String name) {
         this.name = name;

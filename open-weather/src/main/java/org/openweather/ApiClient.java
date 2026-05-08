@@ -7,8 +7,6 @@ import org.springframework.web.client.RestClient;
 @Component
 class ApiClient {
 
-    private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
-
     private final AppConfig appConfig;
     private final RestClient restClient;
 
@@ -17,7 +15,7 @@ class ApiClient {
         this.appConfig = appConfig;
 
         this.restClient = RestClient.builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(appConfig.getBaseUrl())
                 .defaultHeader("Accept", "application/geo+json")
                 .defaultHeader("User-Agent", "OpenWeatherApiClient/1.0.0")
                 .build();
