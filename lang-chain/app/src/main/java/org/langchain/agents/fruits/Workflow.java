@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import org.langchain.model.ModelFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,8 +17,7 @@ public class Workflow {
 
     private static final Logger LOG = LoggerFactory.getLogger(Workflow.class);
 
-    public void run() {
-        ChatModel model = ModelFactory.llama("Qwen/Qwen3-8B-GGUF:Q4_K_M", 1.0);
+    public void run(ChatModel model) {
         FruitAgent fruitAgent = AiServices.create(FruitAgent.class, model);
         BenefitAgent benefitAgent = AiServices.create(BenefitAgent.class, model);
 
