@@ -5,7 +5,7 @@ weather information from
 
 It requires an API Key from Openweathermap.
 
-## Connecting to an MCP-Client
+## Connecting to an MCP Client
 ### Claude Desktop
 Open Settings > Developer > Edit Config. This should bring up `claude_desktop_config.json`.
 There you can add a new entry for `mcpServers`.
@@ -59,5 +59,5 @@ export OPENWEATHER_API_KEY=<YOUR_KEY>
 
 
 ### Conclusion
-To achieve fast startup without overhead this project could be implemented in [Quarkus and build as a native executable](https://quarkus.io/guides/building-native-image/) or even written in Rust and then use STDIO as a communication channel.
+To achieve fast startup without overhead, this project could be implemented in [Quarkus and build as a native executable](https://quarkus.io/guides/building-native-image/), or even written in Rust, and then use STDIO.
 
