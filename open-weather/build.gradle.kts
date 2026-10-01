@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "3.5.14"
+    id("org.springframework.boot") version "4.1.1"
     id("io.spring.dependency-management") version "1.1.7"
     id("org.babelserver.gradle.test-logger") version "2.1.0"
 }
@@ -19,7 +19,7 @@ repositories {
     mavenCentral()
 }
 
-extra["springAiVersion"] = "1.1.4"
+extra["springAiVersion"] = "2.0.1"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")

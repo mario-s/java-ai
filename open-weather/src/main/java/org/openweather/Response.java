@@ -24,9 +24,9 @@ public record Response(@JsonProperty("coord") Point p,
                 new Point(0, 0),
                 Collections.emptyList(),
                 "",
-                new Main(0, 0, 0, 0, 0, 0, 0, 0),
+                new Main(0, null, 0, 0, 0, 0, null, null),
                 0,
-                new Wind(0, 0, 0),
+                new Wind(0, 0, null),
                 new Clouds(0),
                 new Sys("", 0, 0),
                 "N/A"
@@ -45,18 +45,18 @@ public record Response(@JsonProperty("coord") Point p,
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Main(float temp,
-                       @JsonProperty("feels_like") float tempFeels,
+                       @JsonProperty("feels_like") Float tempFeels,
                        @JsonProperty("temp_min") float tempMin,
                        @JsonProperty("temp_max") float tempMax,
                        float pressure,
                        float humidity,
-                       @JsonProperty("sea_level") float levelSea,
-                       @JsonProperty("grid_level") float levelGrid) {}
+                       @JsonProperty("sea_level") Float levelSea,
+                       @JsonProperty("grnd_level") Float levelGround) {}
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Wind(float speed,
                        float deg,
-                       float gust) {}
+                       Float gust) {}
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Clouds(float all) {}

@@ -11,6 +11,8 @@ public class AppConfig {
 
     private String apiKey;
 
+    private String unit;
+
     public void setBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
     }
@@ -25,5 +27,13 @@ public class AppConfig {
 
     public String getApiKey() {
         return apiKey;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getUnit() {
+        return unit;
     }
 }

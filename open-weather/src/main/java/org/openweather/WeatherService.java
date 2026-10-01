@@ -37,13 +37,14 @@ public class WeatherService {
             Response res = apiClient.getCurrentWeather(latitude, longitude);
             LOG.debug("weather response: {}", res);
             weatherText =
-                    String.format("%s, %s: Temperature: %s °C Wind: %s %s Forecast: %s",
+                    String.format("%s, %s: Temperature: %s °C Wind: %s %s Forecast: %s. Units: %s",
                             res.getCountry(),
                             res.name(),
                             res.getTemperature(),
                             res.getWindSpeed(),
                             res.getWindDirection(),
-                            res.getForecast());
+                            res.getForecast(),
+                            apiClient.getUnit());
         } catch (RestClientException e) {
             LOG.warn(e.getMessage(), e);
             weatherText = e.getMessage();
