@@ -1,4 +1,4 @@
-# LangChain4j concepts
+# Fruit Assistants
 
 A project to play around with AI assistants of [LangChain4j](https://docs.langchain4j.dev) 🦜 and a locally available model.
 
