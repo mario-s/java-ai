@@ -1,9 +1,9 @@
-package org.langchain.agents.fruits;
+package org.langchain.assistants.fruits;
 
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 
-public interface FruitAgent {
+public interface FruitAssistant {
 
     @SystemMessage("""
         You generate the name of a fruit.
