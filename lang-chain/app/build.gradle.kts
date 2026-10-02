@@ -23,6 +23,7 @@ dependencies {
     implementation("dev.langchain4j:langchain4j-agentic:1.20.0-beta30")
     implementation("dev.langchain4j:langchain4j-ollama:1.20.0")
     implementation("dev.langchain4j:langchain4j-open-ai:1.20.0")
+    implementation("me.bechberger.util:femtocli:0.4.4")
     implementation("org.slf4j:slf4j-simple:2.0.19")
 }
 

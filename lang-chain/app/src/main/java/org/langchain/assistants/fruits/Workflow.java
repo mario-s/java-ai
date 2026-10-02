@@ -50,7 +50,7 @@ public class Workflow {
 
                 future.join();
             } else {
-                LOG.info("\nfruit {} was already selected by first assistant\n", fruit);
+                LOG.info("The fruit {} was already selected by first assistant. Ignoring it!\n", fruit);
             }
         } while (fruits.size() < MAX_REPEATS);
     }

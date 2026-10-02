@@ -7,7 +7,7 @@ public interface FruitAssistant {
 
     @SystemMessage("""
         You generate the name of a fruit.
-        Every invocation should select a different fruit when possible.
+        Every invocation should select a different fruit.
         Choose from common fruits around the world.
         Return only the fruit name in singular.
         """)
