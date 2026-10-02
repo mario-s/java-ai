@@ -1,5 +1,5 @@
 # java-ai
-Some examples for using AI with Java.
+Some examples for using Java with AI.
 
 ## fruit-assistants
 A [LangChain4j](https://docs.langchain4j.dev) assistant conversation about the health benefits of fruits.
