@@ -1,0 +1,21 @@
+app:
+  config:
+    baseUrl: "https://api.openweathermap.org/data/2.5/weather"
+    apiKey: ${OPENWEATHER_API_KEY}
+    unit: "metric"
+
+spring:
+  main:
+    banner-mode: "off"
+  ai:
+    mcp:
+      server:
+        protocol: streamable
+
+logging:
+  level:
+    root: INFO
+    org:
+      openweather: TRACE
+  pattern:
+    console:
