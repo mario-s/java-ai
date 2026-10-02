@@ -11,4 +11,5 @@ It requires a model provider, this can be:
 `llama serve -hf Qwen/Qwen3-8B-GGUF:Q4_K_M --temp 1.3 --top-p 0.95 --top-k 40`
 
 ## Run the application
-The Application accepts arguments to select the model provider and model. To see all arguments run with `./gradlew run --args='-h'`
+The Application accepts arguments to select the model provider and model. For all arguments, run with: <br/>
+`./gradlew run --args='-h'`
