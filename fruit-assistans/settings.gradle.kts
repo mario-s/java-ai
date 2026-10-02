@@ -10,5 +10,5 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "lang-chain"
+rootProject.name = "fruit-assistants"
 include("app")

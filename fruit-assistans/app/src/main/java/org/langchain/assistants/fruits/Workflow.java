@@ -33,8 +33,9 @@ public class Workflow {
 
     public void run() {
         Set<String> fruits = new HashSet<>();
+        String fruit = "";
         do {
-            String fruit = fruitAssistant.generateFruit().toLowerCase(Locale.ENGLISH);
+            fruit = fruitAssistant.generateFruit(fruit).toLowerCase(Locale.ENGLISH);
             if (fruits.add(fruit)) {
                 System.out.printf("%n> %s:%n", fruit);
 
@@ -50,7 +51,7 @@ public class Workflow {
 
                 future.join();
             } else {
-                LOG.info("The fruit {} was already selected by first assistant. Ignoring it!\n", fruit);
+                LOG.warn("The fruit {} was already selected by first assistant. Ignoring it!\n", fruit);
             }
         } while (fruits.size() < MAX_REPEATS);
     }
