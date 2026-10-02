@@ -1,8 +1,8 @@
 # java-ai
 Some examples for using AI with Java.
 
-## [fruit-assistants](fruit-assistants/README.md)
+## fruit-assistants
 A [LangChain4j](https://docs.langchain4j.dev) assistant conversation about the health benefits of fruits.
 
-## [open-weather]((open-weather/README.md))
+## open-weather
 A [Spring AI](https://spring.io/projects/spring-ai) based MCP server.
