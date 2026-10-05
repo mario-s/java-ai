@@ -6,7 +6,8 @@ weather information from
 It requires an API Key from Openweathermap.
 
 ## Debugging
-The server can be debugged with [MCP Inspector](https://modelcontextprotocol.io/docs/2026-07-28/tools/inspector).
+### MCP Inspector
+The communication with the server can be tested with the interactive [MCP Inspector](https://modelcontextprotocol.io/docs/2026-07-28/tools/inspector).
 To launch the inspector with the server execute npx:
 ```
 npx @modelcontextprotocol/inspector \
