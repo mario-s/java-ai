@@ -5,6 +5,18 @@ weather information from
 
 It requires an API Key from Openweathermap.
 
+## Debugging
+The server can be debugged with [MCP Inspector](https://modelcontextprotocol.io/docs/2026-07-28/tools/inspector).
+To launch the inspector with the server execute npx:
+```
+npx @modelcontextprotocol/inspector \
+  java \
+  -Dspring.ai.mcp.server.stdio=true \
+  -Dspring.main.web-application-type=none \
+  -Dapp.config.apiKey=<YOUR_API_KEY> \
+  -jar build/libs/open-weather-<VERSION>.jar
+```
+
 ## Connecting to an MCP Client
 ### Claude Desktop
 Open Settings > Developer > Edit Config. This should bring up `claude_desktop_config.json`.
