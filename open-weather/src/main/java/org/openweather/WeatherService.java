@@ -4,9 +4,9 @@ package org.openweather;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.ai.tool.annotation.ToolParam;
+import org.springframework.ai.mcp.annotation.McpTool;
+import org.springframework.ai.mcp.annotation.McpToolParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 
@@ -28,9 +28,10 @@ public class WeatherService {
      * @return The weather for the given location
      * @throws RestClientException if the request fails
      */
-    @Tool(description = "Get current weather for a specific latitude and longitude")
-    public String getCurrentWeather(@ToolParam(description = "latitude in decimal degree") double latitude,
-                                    @ToolParam(description = "longitude in decimal degree") double longitude) {
+    @McpTool(description = "Get current weather for a specific latitude and longitude",
+            annotations = @McpTool.McpAnnotations(title = "CurrentWeather", destructiveHint = false, readOnlyHint = true))
+    public String getCurrentWeather(@McpToolParam(description = "latitude in decimal degree") double latitude,
+                                    @McpToolParam(description = "longitude in decimal degree") double longitude) {
         String weatherText = "";
 
         try {

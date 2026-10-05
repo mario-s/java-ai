@@ -11,6 +11,7 @@ spring:
     mcp:
       server:
         protocol: streamable
+        name: "open-weather-mcp-server"
 
 logging:
   level:
