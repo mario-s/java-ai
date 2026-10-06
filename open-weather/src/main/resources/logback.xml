@@ -1,5 +1,13 @@
 <configuration>
 
+    <appender name="STDERR_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>build/logs/app.log</file>
         <append>true</append>
@@ -10,6 +18,7 @@
     </appender>
 
     <root level="debug">
+        <appender-ref ref="STDERR_CONSOLE" />
         <appender-ref ref="FILE" />
     </root>
 </configuration>
