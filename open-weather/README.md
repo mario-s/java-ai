@@ -47,6 +47,7 @@ Here is a configuration that uses the [hyper-mcp-remote](https://github.com/hype
       "command": "hyper-mcp-remote",
       "args": [
         "--no-auth",
+        "--allow-http",
         "http://127.0.0.1:8080/mcp"
       ]
     }
